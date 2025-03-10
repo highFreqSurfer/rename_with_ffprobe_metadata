@@ -38,7 +38,9 @@ p.exec(`ffprobe -v error -show_format -print_format json "${filename}"`, (err, s
       Object.hasOwn(tags, "ARTIST") ? tags["ARTIST"] : null
 
     title = Object.hasOwn(tags, "title") ? tags["title"] :
-      Object.hasOwn(tags, "TITLE") ? tags["TITLE"] : null
+      Object.hasOwn(tags, "TITLE") ? tags["TITLE"] :
+      Object.hasOwn(tags,"album") ? tags["album"] :
+      Object.hasOwn(tags,"ALBUM") ? tags["ALBUM"] : null
 
     let newFilename = `${artist} - ${title}.${suffix}`
     if (dryrun) {
