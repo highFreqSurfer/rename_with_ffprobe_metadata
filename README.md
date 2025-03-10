@@ -1,6 +1,6 @@
 Dependency:
 
-1. nodejs
+1. gjs
 2. ffprobe
 
 
@@ -8,5 +8,5 @@ Dependency:
 How to:
 
 1. clone this repo
-2. chmod +x main.js
-3. ./main.mjs filename [ --dryrun ]
+2. chmod +x main.ts
+3. ./main.ts filename [ --dryrun ]
